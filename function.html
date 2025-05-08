@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--
+<button onclick="box(400,400,834,'red')">click</button>
+-->
+
+<button id="b2">Click Here</button>
+
+    <script>
+        function box(w=100,h=100,c="yellow")
+        {
+            var d = document.createElement("div")
+            document.body.appendChild(d)
+            d.style.width=w+"px"
+            d.style.height=h+"px"
+            d.style.border="5px gray solid"
+            d.style.background=c
+
+        
+        }
+        //box(200,200,"purple")
+
+        var a =document.getElementById("b2")
+
+        //a.onclick = function=box()
+        
+
+        a.onclick = function()
+        {
+
+        box()
+        }
+        /*
+
+        //a.addEventListener("click",box)
+       //a.addEventListener("click",function()
+        {
+            //alert("hello")
+        }
+        */
+</script>
+
+</body>
+</html>

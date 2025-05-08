@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" style="border: 1px black solid" width= "1350" height= "1800"></canvas>
+
+    <script>
+        
+        
+        const canvas = document.getElementById("myCanvas");
+        
+        const context = canvas.getContext("2d");
+        
+        let isDrawing = true;
+        let x = 0;
+        let y = 0;
+        var drawcolor = "red"
+
+        
+        
+
+        canvas.addEventListener("touchstart", (event) => {
+            event.preventDefault();
+            x = event.touches[0].clientX;
+            y = event.touches[0].clientY;
+            isDrawing = true;
+
+        });
+        
+        
+
+        canvas.addEventListener("touchmove",(event) =>
+        {
+            event.preventDefault();
+            if (!isDrawing) return;
+            context.beginPath();
+            context.moveTo(x,y);
+            x = event.touches[0].clientX;
+            y = event.touches[0].clientY;
+            context.lineTo(x, y);
+            context.stroke();
+        });
+
+        canvas.addEventListener("touchend",(event) =>{
+
+            event.preventDefault();
+            isDrawing = false;
+
+        });
+
+        var mouseDown = false;
+        canvas.addEventListener('mousedown',function(e){
+            mouseDown= true;
+            context.beginPath();
+            context.moveTo(e.clientX, e.clientY);
+
+        });
+
+        canvas.addEventListener('mouseup',function(e){
+
+            mouseDown = false;
+
+        });
+
+        canvas.addEventListener('mousemove',function(e){
+            if (mouseDown) {
+                context.lineTo(e.clientX, e.clientY);
+                context.stroke();
+
+            }
+        });
+
+        var erase = document.createElement('div');
+        erase.innerHTML = 'Erase';
+        erase.style.position = 'absolute';
+        erase.style.top = '50px';
+        erase.style.fontSize = "40px";
+        erase.style.right = '0px';
+        erase.style.backgroundColor = 'white';
+        erase.style.border = '2px black solid'
+        erase.style.padding = '10px';
+        erase.style.cursor = 'pointer';
+        document.body.appendChild(erase);
+
+        erase.addEventListener('click',function() {
+            context.clearRect(0, 0,canvas.width, canvas.height);
+
+        });
+
+        
+
+        var color = document.createElement('input');
+        color.type = 'color';
+        color.style.width = "10%"
+        color.style.height = "3%"
+        color.value = '#000000';
+        color.style.position='absolute';
+        color.style.top = '50px';
+        color.style.left = '100px';
+        document.body.appendChild(color);
+
+        color.addEventListener('change', function() {
+            context.strokeStyle = color.value;
+            drawcolor=color.value;
+
+        });
+
+        var rubber = document.createElement('div');
+        rubber.innerHTML = 'Erase on/off';
+
+        
+        rubber.style.position = 'absolute';
+        rubber.style.top = '50px';
+        rubber.style.fontSize = '40px';
+        rubber.style.right = '200px';
+        rubber.style.backgroundColor = 'white';
+        rubber.style.border = '2px black solid';
+        rubber.style.padding = '10px';
+        rubber.style.cursor = 'pointer';
+        document.body.appendChild(rubber);
+
+        rubber.addEventListener('click',function() {
+            if(!isDrawing)
+            {
+                context.strokeStyle = drawcolor
+                isDrawing = true
+            }
+            else
+            {
+                context.strokeStyle="white"
+                isDrawing = false
+
+            }
+
+        });
+
+        var eraserWidth = document.createElement('input');
+        eraserWidth.type = 'range';
+        eraserWidth.width="200px"
+        eraserWidth.min = '1';
+        eraserWidth.max = '100';
+        eraserWidth.value = '10';
+        eraserWidth.style.position = 'absolute';
+        eraserWidth.style.top = '25px';
+        eraserWidth.style.width="20%"
+        eraserWidth.style.height= "5%"
+        eraserWidth.style.right = '500px';
+        document.body.appendChild(eraserWidth);
+        eraserWidth.addEventListener('change',function() {
+            context.lineWidth = eraserWidth.value;
+        });
+        
+        
+
+        function savedraw()
+        {
+            fname=prompt("File name..File will be saved in png formate","mydraw")
+            dataURL = canvas.toDataURL();
+            link = document.createElement("a");
+            link.download = fname
+            link.href = dataURL;
+            link.click();
+
+        }
+        
+        event.preventDefault();
+        
+
+        
+
+
+    </script>
+    <h1>Created By Himanshu Pal :- javaScript isDrawing
+        <button onclick="savedraw()" style="width: 20%; height: 40px; margin-left: 30px;">Save</button>
+    </h1>
+    
+    
+    
+</body>
+</html>

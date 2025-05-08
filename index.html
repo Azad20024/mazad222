@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color:#131313;
+    box-sizing: border-box;
+}
+
+nav ul{
+    list-style: none;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 19px;
+}
+nav ul li a:hover
+{
+    color:#f47421;
+}
+
+#pic
+{
+width: 290px;
+height: auto;
+margin-left: 140px;
+margin-top: -15px;
+background-color: ellow;
+}
+
+#textdiv
+{
+    width: 60%;
+    height: 360px;
+    background-color: yllow;
+    margin: -400px;
+    margin-left: 400px;
+}
+
+#first
+{
+    background-color: ed;
+    font-size: 31px; 
+    color: gray;
+    margin-top: -500px;
+    margin-left: 190px;
+    cursor: pointer;
+}
+#second
+{
+    background-color: ed;
+    font-size: 58px;
+    color: #f47421;
+    margin-top: 20px;
+    margin-left: 190px;
+    cursor: pointer;
+}
+
+#btncv
+{
+    width: 160px;
+    height: 40px;
+    border: 2px gray solid;
+    margin-left: 190px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+#ser
+{
+    color: #A5A9B1;
+    text-align: center;
+    font-size: 41px;
+    margin-top: 410px;
+    cursor: pointer;
+}
+
+
+
+
+.one:hover
+{
+    background-color: #f47421;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+#con
+{
+    color: #A5A9B1;
+    text-align: center;
+    font-size: 41px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+#main
+{
+width:70%;
+height: 400px;
+margin-top: 40px;
+margin: auto;
+color: rgb(255, 255, 255);
+}
+
+table{
+width:50%;
+height: 400px;
+margin: auto;
+}
+
+
+#main input[type="text"],input[type="password"]{color:rgb(255, 255, 255); width:100%;border-radius: 3px;border: 1px rgb(39, 39, 39)solid; height: 33px; padding: 15px; background-color: rgb(39, 39, 39);}
+
+#cvbtn
+{
+    width: 160px;
+    height: 40px;
+    color: gray;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+#btnone
+{
+    width: 12%;
+    height: 40px; 
+    margin-left: 710px;
+    cursor: pointer;
+    border-radius: 9px;
+    font-size: 18px;
+    border: 3px rgb(64, 64, 64) solid;
+    color:rgb(64, 64, 64)  ;
+}
+
+#btnonediv :hover
+{
+    background-color: #f47421;
+    color: white;
+}
+
+
+
+
+
+#footerdiv
+{
+
+    width: 100%;
+    height: 380px;
+    background-color: rgb(39, 39, 39);
+    margin-top: 40px;
+}
+
+
+.iconsdiv
+{
+    width: 5%;
+    height: 210px;
+    background-color: rgb(116, 48, 48);
+    margin: 20px;
+}
+
+
+.fa-phone
+{
+    color: gray;
+    background-color:rgb(39, 39, 39) ;
+    font-size: 20px;
+    padding: 25px;
+}
+
+.fa-envelope
+{
+    color: gray;
+    background-color:rgb(39, 39, 39) ;
+    font-size: 20px;
+    padding: 25px;
+}
+
+.fa-location-dot
+{
+ 
+    color: gray;
+    background-color:rgb(39, 39, 39) ;
+    font-size: 20px;
+    padding: 25px;   
+}
+
+
+#iconadd
+{
+    width: 28%;
+    height: 160px;
+    background-color: gray;
+    margin-left: 90px;
+    margin-top: -210px;
+}
+
+
+.Address
+{
+    color: #A5A9B1;
+    font-size: 18px;
+    padding: 18px;
+    background-color:rgb(39, 39, 39);
+    cursor: pointer;
+}
+
+
+
+
+#socialicon
+{
+    width: 25%;
+    height: 60px;
+    background-color: rgb(39, 39, 39);
+    margin: 35px;
+    margin-top: 60px;
+
+}
+
+.fa-facebook
+{
+   color: gray;
+   font-size: 27px;
+   background-color: rgb(39, 39, 39);
+   padding: 15px;
+   cursor: pointer;
+}
+
+
+.fa-instagram
+{
+    color: gray;
+   font-size: 27px;
+   background-color: rgb(39, 39, 39);
+   padding: 15px;
+   cursor: pointer;
+
+}
+
+.fa-whatsapp
+{
+    color: gray;
+   font-size: 27px;
+   background-color: rgb(39, 39, 39);
+   padding: 15px;
+   cursor: pointer;
+
+}
+
+.fa-youtube
+{
+    color: gray;
+   font-size: 27px;
+   background-color: rgb(39, 39, 39);
+   padding: 15px;
+   cursor: pointer;
+
+}
+
+.fa-behance
+{
+    color: gray;
+   font-size: 27px;
+   background-color: rgb(39, 39, 39);
+   padding: 15px;
+   cursor: pointer; 
+}
+
+
+
+#headdivone
+{
+    width: 22%;
+    height: 350px;
+    background-color:rgb(39, 39, 39) ;
+    margin: auto;
+    margin-top: -320px;
+}
+
+
+#headdivtwo
+{
+    width: 22%;
+    width: 22%;
+    height: 350px;
+    background-color: rgb(39, 39, 39);
+    margin: auto;
+    margin-left: 810px;
+    margin-top: -350px;
+}
+
+.textnav
+{
+    color: #A5A9B1;
+    padding: 14px;
+    list-style: none;
+    font-size: 17px;
+    display: flex;
+    background-color:rgb(39, 39, 39);
+
+}
+
+.servisenav
+{
+    color: #A5A9B1;
+    padding: 14px;
+    list-style: none;
+    font-size: 17px;
+    display: flex;
+    background-color:rgb(39, 39, 39);  
+}
+
+#headdivone  a
+{
+  text-decoration: none;
+}
+
+#headdivtwo  a
+{
+  text-decoration: none;
+}
+
+
+#headdivone  a:hover
+{
+   color: white;
+}
+
+
+#headdivtwo a:hover
+{
+   color: white;
+}
+
+
+
+
+
+
+
+
+#fistdiv
+{
+    width: 100%;
+    height: 250px;
+    background-color: tea;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.div3
+{
+    width: 20%;
+    height: 210px;
+    background-color: rgb(39, 39, 39);
+    margin-top: 20px;
+    border-radius: 9px;
+    cursor: pointer;
+
+}
+
+.pic3
+{
+    width: 55%;
+    height: 140px;
+    margin-left: 60px;
+    background-color: rgb(39, 39, 39);
+    margin-top: 15px;
+}
+
+.pera3
+{
+    color: white;
+    margin-left: 66px;
+    background-color: rgb(39, 39, 39);
+    font-size: 21px;
+
+}
+
+
+#secndiv :hover
+{
+   color: #f47421;
+}
+
+
+#fistdiv :hover
+{
+   color: #f47421;
+}
+
+
+
+
+#secndiv
+{
+    width: 90%;
+    height: 250px;
+    background-color: tea;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div2
+{
+    width: 22%;
+    height: 210px;
+    background-color: rgb(39, 39, 39);
+    margin-top: 20px;
+    border-radius: 9px;
+    cursor: pointer;
+
+}
+
+
+.pic2
+{
+    width: 55%;
+    height: 140px;
+    margin-left: 60px;
+    background-color: rgb(39, 39, 39);
+    margin-top: 15px;
+
+}
+
+.pera2
+{
+    color: white;
+    margin-left: 80px;
+    background-color: rgb(39, 39, 39);
+    font-size: 21px;
+
+}
+
+@media only screen and (max-width: 1200px) {
+    #textdiv {
+        margin-left: 350px;
+    }
+    #btnone {
+        margin-left: 600px;
+    }
+    #headdivtwo {
+        margin-left: 650px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #pic {
+        margin-left: 100px;
+    }
+    #textdiv {
+        margin-left: 300px;
+        width: 50%;
+    }
+    #first, #second {
+        margin-left: 150px;
+    }
+    #btnone {
+        margin-left: 450px;
+    }
+    #headdivtwo {
+        margin-left: 500px;
+    }
+    .div3, .div2 {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+    #pic {
+        margin-left: 50px;
+    }
+    #textdiv {
+        margin-left: 250px;
+        width: 45%;
+    }
+    #first, #second {
+        margin-left: 100px;
+        font-size: smaller;
+    }
+    #btnone {
+        margin-left: 300px;
+        width: 20%;
+    }
+    #fistdiv, #secndiv {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .div3, .div2 {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    #headdivone, #headdivtwo {
+        width: 80%;
+        margin: 20px auto;
+        height: auto;
+    }
+    #headdivtwo {
+        margin-top: 20px;
+    }
+    #iconadd {
+        width: 80%;
+        margin-left: 20px;
+    }
+    #socialicon {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #pic {
+        width: 200px;
+        margin-left: 20px;
+    }
+    #textdiv {
+        margin-left: 20px;
+        width: 90%;
+        margin-top: 20px;
+    }
+    #first, #second {
+        margin-left: 20px;
+    }
+    #btncv, #btnone {
+        margin-left: 20px;
+        width: 50%;
+    }
+    table {
+        width: 90%;
+    }
+    .div3, .div2 {
+        width: 80%;
+    }
+    .iconsdiv {
+        width: 15%;
+    }
+    #socialicon a i {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav ul li a {
+        font-size: 16px;
+        padding: 5px;
+    }
+    #pic {
+        width: 150px;
+    }
+    #first {
+        font-size: 24px;
+    }
+    #second {
+        font-size: 36px;
+    }
+    #ser, #con {
+        font-size: 32px;
+    }
+    .pera3, .pera2 {
+        font-size: 18px;
+        margin-left: 50px;
+    }
+    .pic3, .pic2 {
+        margin-left: 40px;
+    }
+}
+
+
+
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#ser">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="app.html">Mobile App</a></li>
+            <li><a href="https://www.behance.net/mdazad955">Behance</a></li>
+            <li><a href="practice.html">Practice Work</a></li>
+        </ul>
+   
+    </nav>
+
+    <img src="image/azadp.png" id="pic">
+
+    <div id="textdiv">
+
+        <h1 id="first">Hello, I'm</h1>
+        <h1 id="second">Md Azad</h1>
+        <h1 id="second">UI/UX Designer</h1>
+
+        <button id="btncv"><a id="cvbtn" href="image/CV-01.jpg">Download C V  </a></button>
+
+    </div>
+
+    <h1 id="ser">services</h1>
+
+
+
+    <div id="fistdiv">
+
+        <div class="div3">
+
+            <img src="image/nine-01.png" class="pic3">
+
+            <h1 class="pera3">Web Developer</h1>
+
+        </div>
+
+        <div class="div3">
+
+            <img src="image/eight-01.png" class="pic3">
+
+            <h1 class="pera3">Web App Design</h1>
+
+        </div>
+
+        <div class="div3">
+
+            <img src="image/seven-01.png" class="pic3">
+
+            <h1 class="pera3">UI-UX Design</h1>
+
+        </div>
+
+
+        
+    </div>
+
+
+
+
+
+    
+    <div id="secndiv">
+
+        <div class="div2">
+
+            <img src="image/six-01.png" class="pic2">
+
+            <h1 class="pera2">App Design</h1>
+
+        </div>
+
+        <div class="div2">
+
+            <img src="image/tenn-01.png" class="pic2">
+
+            <h1 class="pera2">Graphic Design</h1>
+
+        </div>
+
+    
+
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 id="con">Contact me</h1>
+
+
+
+<div id="main">
+    <form action="http://tataplay/user/get.php" Method="post"> 
+    
+    <table >
+    
+    
+    
+    <tr><td><label>First Name :</label></td><td><input type="text" placeholder="First Name"></td></tr>
+    
+    <tr><td><label>Last Name :</label></td><td><input type="text"placeholder="Last Name"></td></tr>
+    
+    <tr><td><label>E-mail :</label></td><td><input type="text"placeholder="Your mail-id"></td></tr>
+    
+    <tr><td><label>Mobile :</label></td><td><input type="text" placeholder="Phone Number"></td></tr>
+
+    <tr><td><label>Address :</label></td><td><input type="text"placeholder="Full Address"></td></tr>
+    
+ 
+    <tr><td><label>Message :</label></td><td><input type="text" placeholder="Type Something..."></td></tr> 
+
+    
+
+    
+</form>
+</table>
+</div>
+
+  <div id="btnonediv">
+<button id="btnone">Sand Message</button>
+</div>
+
+
+
+<div id="footerdiv">
+
+
+    <div class="iconsdiv">
+
+    <i class="fa-solid fa-phone"></i>
+
+    <i class="fa-solid fa-envelope"></i>
+
+    <i class="fa-solid fa-location-dot"></i>
+
+</div>
+
+    
+
+<div id="iconadd">
+
+    <h1 class="Address">+91-9555358095</h1>
+
+    <h1 class="Address">mdazad22236@gmail.com</h1>
+
+    <h1 class="Address">A-22, Shalimar Garden, Ghaziabad UP
+        (201005)</h1>
+
+
+
+
+</div>
+
+
+<div id="socialicon">
+
+
+<a href="https://www.facebook.com/share/19ZKxz4jVP/"><i class="fa-brands fa-facebook"></i></a>
+
+<a href="https://www.instagram.com/mohdazadsaifi?igsh=MWMzNGIxejVjbGI5aQ=="><i class="fa-brands fa-instagram"></i></a>
+
+<a href="https://wa.me/qr/HHL4WWZPEUZHD1"><i class="fa-brands fa-whatsapp"></i></a>
+
+<a href="https://youtube.com/@azad-2024?si=MM8UnIvTn6yJ8mHZ"><i class="fa-brands fa-youtube"></i></a>
+
+<a href="https://www.behance.net/mdazad955"><i class="fa-brands fa-behance"></i></a>
+
+
+</div>
+
+
+
+<div id="headdivone">
+
+
+    <a href="" class="textnav">Home</a>
+    <a href="" class="textnav">About</a>
+    <a href="" class="textnav">Projects</a>
+    <a href="" class="textnav">Behance</a>
+    <a href="" class="textnav">Mobile App</a>
+    <a href="" class="textnav">Practise Work</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="headdivtwo">
+
+    <a href="" class="servisenav">Graphic Designer</a>
+    <a href="" class="servisenav">Web Design</a>
+    <a href="" class="servisenav">Web Doveloper</a>
+    <a href="" class="servisenav">Web Dovelopment</a>
+    <a href="" class="servisenav">UI-UX Designer</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+ 
+
+
+</body>
+</html>

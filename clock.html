@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<style>
+#clock
+{
+width: 100%;
+height: 60px;
+font-size: 60px;
+color: white;
+text-shadow: 5px 5px 5px gray;
+text-align: center;
+
+
+
+}
+
+
+</style>
+<body>
+    <h1 style="text-align: center;color: white;text-shadow: 5px 5px 5px gray;font-size: 50px;">Today Time</h1>
+    <div id="clock">Time</div>
+    
+
+
+    <script>
+
+var c = document.getElementById("clock")
+var d = document.getElementById("date")
+
+function show()
+{
+
+    var d = new Date()
+    c.innerHTML = d.toLocaleTimeString()
+    d.innerHTML = d.toLocaleDateString()
+    
+}
+var t1 = setInterval("show()",1000)
+show()
+
+function f1()
+{
+
+document.bgColor="orange"
+alert("Hello Team Its Tea Time")
+
+
+}
+f1()
+
+
+var b = document.createElement("button")
+document.body.appendChild(b)
+b.style.padding="10px"
+b.style.background="white"
+b.style.width="5%"
+b.style.height="20px"
+b.style.cursor="pointer"
+b.onclick=function()
+{
+
+    clearTimeout(b)
+    alert("time is over")
+}
+
+
+
+    </script>
+    
+</body>
+</html>

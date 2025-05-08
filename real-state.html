@@ -1,0 +1,1239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    transition: 0.50s;
+    scroll-behavior: smooth;
+}
+
+#menu-bar
+{
+    width:100%;
+    text-align: left;
+    background:hsl(217, 38%, 9%) ;
+    border:1px black solid;
+    display: flex;
+}
+
+#m1
+{
+ width:20%;
+ border:0px black solid;
+ padding:20px;
+ margin-right: 280px;
+ margin-left: 20px;
+}
+
+#menu-bar-link ol li
+{
+    display: inline;
+    list-style: none;
+    cursor:pointer;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family:arial;
+    transition:0.50s;
+    padding: 25px;
+}
+
+#menu-bar-link ol li:hover
+{
+   font-size: 19px;
+}
+
+#menu-bar-link ol
+{
+    
+    margin-top: 15px;
+    background-color: rd;
+    margin: 15px;
+    
+}
+
+#menu-bar-link ol li a{color:white;text-decoration: none;}
+
+.fa-solid
+{
+    font-size: 30px;
+    
+}
+
+#header-ban
+{
+    width:100%;
+    height:600px;
+    text-align: center;
+    background-image: url(image/banner.jpg);
+    border: 1px black solid;
+}
+
+.pic
+{
+    width:100%;
+    height:600px;
+    z-index: -1;
+}
+
+#header-txt
+{
+    width:60%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 200px;
+    color: white;
+    font-size: 30px;
+    font-family: arial;
+    text-align: center;
+    border:10px rgb(255, 255, 255) ridge;
+    text-shadow: 5px 5px 10px black;
+}
+
+#form
+{
+    width:80%;
+    height:150px;
+    margin: auto;
+    margin-top: -60px;
+    border: 4px white ridge;
+    border-radius: 10px;
+    background:#0f1621 ;
+}
+
+#form input[type="text"]{width:300px;margin-top:25px;margin-left:30px;padding:10px;font-size: 16px;border: 1px solid #ccc;border-radius: 4px;}
+
+#form input[type="submit"],[type="reset"]{width:100px;margin-top:25px;padding:10px;margin-left:10px;font-size: 16px;border: 1px solid #ccc;border-radius: 4px;}
+
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    margin-left:30px ;
+    color: #ffffff;
+}
+
+
+
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 4px #007BFF;
+}
+
+.price-input-wrapper {
+    display: flex;
+    gap: 20px; /* Space between Min and Max Price boxes */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price-input {
+    text-align: center;
+    flex: 1; /* Ensures equal spacing for both inputs */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 4px #007BFF;
+    outline: none;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.select-box {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.select-box select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Dropdown list styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {display: block;}
+
+#prop-type
+{
+    width:100%;
+    height:480px;
+    border:0px black solid;
+    text-align: center;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+
+}
+
+.prop-name
+{
+    width:100%;
+    padding:30px;
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+.prop-pic
+{
+    width:40%;
+    height:400px;
+    border-radius: 20px;
+    border:1px black solid;
+    box-shadow:3px 3px 10px rgb(0, 0, 0);
+}
+
+.prop-pic h2
+{
+    font-size: 25px;
+    margin: 10px;
+    font-family: arial;
+}
+
+.pic
+{
+    width:100%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+#recent-prop
+{
+    width:100%;
+    height:100px;
+    border:0px black solid;
+}
+
+#recent-prop h2
+{
+    font-size: 25px;
+    font-family: arial;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+#recent-prop h3
+{
+    margin-top: 10px;
+    color:rgb(65, 65, 65);
+    margin-left: 40px;
+    font-family: arial;
+    
+}
+
+.card-slider {
+    display: flex;
+
+   padding: 15px;
+   background-color: ed;
+  
+}
+
+.card {
+    flex-shrink: 0;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-left:90px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.50s;
+}
+
+.card:hover
+{
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #06284d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button a{color: white; text-decoration: none;}
+
+.card button:hover {
+    background-color: #0056b3;
+}
+
+.coll
+{
+    width:30%;
+    height:300px;
+    cursor: pointer;
+    border:1px black solid;
+    margin:20px;
+    float: left;
+    border-radius: 10px;
+    transition: 0.50s;
+}
+
+.coll:hover
+{
+    transform: scale(1.02);
+}
+
+.coll-pic
+{
+    width:100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.sub-coll
+{
+    width:100%;
+    height:300px;
+    border:0px black solid;
+    border-radius: 10px;
+    margin-top: -305px;
+    text-align: center;
+}
+
+.sub-coll h1
+{
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    margin-top: 230px;
+    font-family: arial;
+}
+
+.coll2
+{
+    width:30%;
+    height:300px;
+    cursor: pointer;
+    border:1px black solid;
+    margin:20px;
+    float: left;
+    border-radius: 10px;
+    transition: 0.50s;
+}
+
+.coll2:hover
+{
+    transform: scale(1.02);
+}
+
+
+.coll2-pic
+{
+    width:100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.sub-coll2
+{
+    width:100%;
+    height:300px;
+    border:0px black solid;
+    border-radius: 10px;
+    margin-top: -305px;
+    text-align: center;
+}
+
+.sub-coll2 h1
+{
+    font-size: 40px;
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    margin-top: 230px;
+    font-family: arial;
+}
+
+.coll3
+{
+    width:30%;
+    height:300px;
+    cursor: pointer;
+    border:1px black solid;
+    margin:20px;
+    margin-bottom: 50px;
+    float: left;
+    border-radius: 10px;
+    transition: 0.50s;
+}
+
+.coll3:hover
+{
+    transform: scale(1.02);
+}
+
+
+.coll3-pic
+{
+    width:100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.sub-coll3
+{
+    width:100%;
+    height:300px;
+    border:0px black solid;
+    border-radius: 10px;
+    margin-top: -305px;
+    text-align: center;
+}
+
+.sub-coll3 h1
+{
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    margin-top: 230px;
+    font-family: arial;
+}
+
+.luxury
+{
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-family: arial;
+    padding: 20px 20px;
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+.luxury h1{
+    font-size: 35px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.luxury p
+{
+    font-size: 20px;
+    color:#393939;
+    
+}
+
+.luxury-detail {
+width: 100%;
+height: 550px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px; /* Add space between items */
+padding: 20px 0;
+
+animation: textAnimation 1.5s ease-out forwards;
+}
+
+.luxury-info {
+width: 27%;
+height: 320px;
+border: 4px #0f1621 ridge;
+border-radius: 10px;
+margin-bottom: 20px; /* Optional: Add space below each item */
+text-align:left;
+
+}
+
+
+.pic-info{
+width: 99%;
+height: 200px;
+background: #393939;
+margin: auto;
+object-fit: cover;
+transition: 0.5s;
+border-radius: 10px;
+
+}
+
+.pic-info:hover
+{
+transform: scale(1.01);
+
+
+}
+
+.luxury-pic {
+width: 100%;
+height: 200px;
+border-radius: 10px;
+cursor: pointer;
+
+}
+
+.luxury-info h1{
+font-size:30px;
+margin-top: 10px;
+margin-bottom: 20px;
+width: 80%;
+margin: auto;
+margin-top: 10px;
+
+}
+
+.luxury-info p{
+font-size: 16px;
+margin-bottom: 10px;
+margin-top: 10px;
+
+}
+
+.luxury-info button{
+width: 35%;
+height: 40px;
+border: none;
+font-size: 15px;
+border-radius: 10px;
+margin-left: 30px;
+background-color: #0f1621;
+color: aliceblue;
+margin-top: 20px;
+}
+
+
+.luxury-info button:hover{
+cursor: pointer;
+}
+
+.luxury-info button a {color: aliceblue; text-decoration: none;}
+
+
+.testimonial-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+  }
+  
+  .testimonial-section h2 {
+    font-size: 2rem;
+    font-family: arial;
+    color: #000000;
+    margin-bottom: 50px;
+    margin-top: -80px;
+  }
+  
+  .testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .testimonial-card {
+    background-color: #0f1621 ;
+     color: #fff;
+
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .client-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .client-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ddd;
+  }
+  
+  .client-info h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .client-info p {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 1024px) {
+    .testimonial-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+.newsletter-section {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    font-family: arial;
+    text-align: center;
+}
+
+.newsletter-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.newsletter-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.newsletter-header p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#newsletter-email {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#subscribe-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #0f1621;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#subscribe-btn:hover {
+    background-color: #06284d;
+}
+
+.newsletter-footer p {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0f1621;
+    color: #fff;
+    font-family: arial;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-about h4,
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footer-about p,
+  .footer-contact p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-contact p a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-contact p a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-social .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    color: #ccc;
+  }
+
+
+
+  
+
+
+</style>
+
+<body> 
+
+    <div id="menu-bar">
+
+<div id="menu-bar-link">
+
+    <ol>
+
+        <li><a href="index.html">Home</a>
+        </li>
+
+      
+        <li><a href="#form">Buy</a></li>
+        <li><a href="#form">Sell</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Review</a></li>
+        <li><a href="http://127.0.0.1:5500/r.html">Contact</a></li>
+      
+
+    </ol>
+
+</div> 
+
+</div>
+
+<div id="header-ban">
+        
+    <div id="header-txt">
+        <h1>A New Vision Of Comfort Life</h1>  
+    </div>
+
+</div>
+
+<div id="form">
+  <table cellpadding="25">
+      <tr>
+          <td><input type="text" title="Search" value="Search"></td>
+          <td>
+              <div class="custom-select">
+                  <label for="city">Select Your City:</label>
+                  <div class="select-box" onclick="toggleDropdown()">
+                      <span id="selected-city">--Choose a City--</span>
+                      <div id="city-dropdown" class="dropdown-content">
+                           <a href="delhi.html">Delhi</a>
+                          <a href="mumbai.html">Mumbai</a>
+                          <a href="banglore.html">Bangalore</a>
+                          <a href="jaipur.html">Jaipur</a>
+                      </div>
+                  </div>
+              </div>
+          </td>
+          <td>
+             
+              </div>
+          </td>
+          <td><input type="reset"></td>
+      </tr>
+  </table>
+</div>
+<a name="buy">
+<div class="prop-name"><h1>Property Types</h1></div>
+
+<div id="prop-type">
+
+ <div class="prop-pic"><img src="image/rleft.jpg" class="pic" ></a>
+
+    <h2>Commercial Property</h2>
+
+</div>
+
+<div class="prop-pic"><img src="image/rright.jpg" class="pic" ></a> <h2>Residential Property</h2></div>
+
+</div>
+
+<div id="recent-prop">
+
+<h2>Recently Added</h2>
+<h3>Based on Preferences of users like you</h3>
+
+</div>
+    
+  
+        <div class="card-slider">
+            <!-- Card 1 -->
+
+            <div class="card">
+                <img src="image/sone.jpg" alt="House Image">
+                <h1>Gour City</h1>
+                <ul>
+                    <li>Sec-15, Noida</li>
+                    <li>INR - 82 L</li>
+                    <li>EMI Start From - 22K</li>
+                    <li>Contact - Raju Builder</li>
+                </ul>
+                <button><a href="goyal.html">More</button></a>
+            </div>
+
+            <div class="card">
+                <img src="image/stwo.jpg" alt="House Image">
+                <h1>Eligo Wave City</h1>
+                <ul>
+                    <li>Pune Maharashtra</li>
+                    <li>INR - 94 L</li>
+                    <li>EMI Start From - 28K</li>
+                    <li>Under Construction</li>
+                </ul>
+                <button><a href="prestige.html">More</button></a>
+            </div>
+
+           
+
+            <div class="card">
+                <img src="image/sthree.jpg" alt="House Image">
+                <h1>Green Vally City</h1>
+                <ul>
+                    <li>New Delhi</li>
+                    <li>INR - 1 C</li>
+                    <li>EMI Start From - 46K</li>
+                    <li>Ready To Move</li>
+                </ul>
+                <button><a href="crown.html">More</button></a>
+            </div>
+    
+    
+</div>
+
+<div id="recent-prop">
+
+    <h2>Featured Collections</h2>
+    <h3>Handpicked projects for you</h3>
+    
+    </div>
+ 
+    <div class="coll">
+        <img src="image/homec.jpg" class="coll-pic">
+        <a href="independent.html">
+        <div class="sub-coll"><h1>Independent House</h1></div>
+          </a>
+    </div>
+
+    <div class="coll2">
+      
+        <img src="image/homer.jpg" class="coll-pic">
+        <a href="luxury.html">
+        <div class="sub-coll2"><h1>Luxury House</h1></div>
+      </a>
+
+    </div>
+
+    <div class="coll3">
+        <img src="image/lhome.jpg" class="coll-pic">
+        <a href="builder.html">
+        <div class="sub-coll3"><h1>Builder Floors</h1></div>
+          </a>
+    </div>
+
+
+    
+
+    
+
+<script>
+
+function toggleDropdown() {
+        document.getElementById("city-dropdown").classList.toggle("show");
+    }
+
+    $(".sub-coll").hide()
+    $(".sub-coll2").hide()
+    $(".sub-coll3").hide()
+
+$(document).ready(function () {
+
+    $(".coll").click(function()
+{
+    $(".sub-coll").show(800)
+   
+})
+
+   $(".coll").mouseleave(function()
+{
+    $(".sub-coll").hide(1000)
+})
+
+$(".coll2").click(function()
+{
+    $(".sub-coll2").show(800)
+   
+})
+
+   $(".coll2").mouseleave(function()
+{
+    $(".sub-coll2").hide(1000)
+})
+
+
+$(".coll3").click(function()
+{
+    $(".sub-coll3").show(800)
+   
+})
+
+   $(".coll3").mouseleave(function()
+{
+    $(".sub-coll3").hide(1000)
+})
+  
+})
+
+
+</script>
+
+<!--luxury section-->
+  <div class="luxury">
+   <h1>
+       Our Services
+   </h1>
+
+   <p>
+    We Offer A Wide Range Of Real Estate Services
+   </p>
+</div>
+
+
+
+<div class="luxury-detail">
+
+
+   <div class="luxury-info">
+
+       <div class="pic-info">
+       <img class="luxury-pic" src="image/sale.jpg">
+   </div>
+
+   <h1>
+   Sell & Purchase
+   </h1>
+
+   <button> <a href="commercial.html"> Learn More</button></a> 
+   </div>
+
+   <div class="luxury-info">
+
+       <div class="pic-info">
+           <img class="luxury-pic" src="image/rent.webp">
+       </div>
+
+       <h1>
+          Rent
+       </h1>
+
+       <button><a href="sell.html">Learn More</button></a>
+       </div>
+
+   
+
+
+   <div class="luxury-info">
+
+
+       <div class="pic-info">
+           <img class="luxury-pic" src="image/Loan.jpg">
+       </div>
+
+       <h1>
+           Loan Facility
+       </h1>
+
+  
+       <button> <a href="residential.html"> Learn More</button></a>
+       </div>
+
+   </div>
+
+   
+   <section class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <div class="client-info">
+          
+          <div>
+            <h3>Mohit singh</h3>
+            <p>Home Buyer</p>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "The team was amazing and helped me find my dream home effortlessly. Highly recommend!"
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+          
+          <div>
+            <h3>Anurag Kumar</h3>
+            <p>Property Seller</p>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "Selling my property was stress-free and quick, thanks to their expertise!"
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+         
+          <div>
+            <h3>Vishal Pandey</h3>
+            <p>Investor</p>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "A professional and friendly team that truly understands the market. Great experience!"
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+          
+          <div>
+            <h3>Diljeet Singh</h3>
+            <p>Tenant</p>
+          </div>
+        </div>
+        <p class="testimonial-text">
+          "I found a perfect rental property within days. Amazing service and support!"
+        </p>
+      </div>
+    </div>
+
+    
+  </section>
+
+
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-header">
+                <h2>Stay Updated with the Latest Listings!</h2>
+                <p>Subscribe to our newsletter to get exclusive updates on the latest properties, market trends, and special offers straight to your inbox.</p>
+            </div>
+            
+            <div class="newsletter-form">
+                <form action="your-backend-script-or-service" method="POST" id="newsletter-form">
+                    <input type="email" name="email" id="newsletter-email" placeholder="Enter Your Mail" required>
+                    <button type="submit" id="subscribe-btn">Subscribe Now</button>
+                </form>
+            </div>
+    
+            <div class="newsletter-footer">
+                <p>By subscribing, you agree to receive emails with property updates and offers. You can unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo and About Section -->
+      <div class="footer-about">
+        <h4>Luxury Land</h4>
+        <p>Your trusted partner in finding the perfect home. We offer a wide range of properties to suit your needs and lifestyle.</p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/properties">Properties</a></li>
+          <li><a href="/agents">Agents</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Section -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone : </strong> 9555358095</p>
+        <p><strong>Email : </strong> <a href="mailto:info@realestate.com"> mdazad22236@gmail.com</a></p>
+        <p><strong>Address :</strong> Main GT Road, C604, Dilshad Garden, Delhi 11036</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+    
+
+
+</body>
+</html>

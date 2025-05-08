@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; background-color: black; color: white;">Onclick change background clr</h1>
+    <script>
+        var clist = new Array()
+        var r,g,b
+        var a = 1
+        var c = 1
+
+
+
+        while(a<=1000)
+        {
+            r =Math.round(Math.random()*255)
+            g =Math.round(Math.random()*255)
+            b =Math.round(Math.random()*255)
+            var mycolor = "rgb("+r+","+g+","+b+")"
+            clist[a]=mycolor
+
+            if(c==10)
+            {
+                document.write("<br/>")
+            }
+            
+            document.write("<div onclick= 'random(this)' style='cursor:pointer; border:1px solid black;padding:20px;margin:20px;width:100px;height:20px;background:"+clist[a]+";'>"+mycolor+"</div>")
+
+            a++
+
+            function random(t)
+            {
+                document.body.style.background = t.style.background
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
